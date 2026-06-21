@@ -1,0 +1,22 @@
+{
+  "common": {
+    "welcome": "Welcome to Wandersync",
+    "plan_trip": "Plan a Trip",
+    "start_planning": "Start Planning Now 🚀",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "auth": {
+    "welcome_back": "Welcome Back",
+    "create_account": "Create Account",
+    "username": "Username",
+    "password": "Password",
+    "required": "Username and password are required"
+  },
+  "planner": {
+    "where_to": "Where to next?",
+    "generate": "Generate Plan ✨",
+    "placeholder": "E.g., I want to spend 3 days in Goa..."
+  }
+}

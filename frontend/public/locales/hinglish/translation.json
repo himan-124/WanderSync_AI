@@ -1,0 +1,22 @@
+{
+  "common": {
+    "welcome": "Wandersync me aapka swagat hai",
+    "plan_trip": "Trip Plan Karein",
+    "start_planning": "Abhi Plan Shuru Karein 🚀",
+    "logout": "Logout Karein",
+    "login": "Login",
+    "register": "Register"
+  },
+  "auth": {
+    "welcome_back": "Swagat hai wapas",
+    "create_account": "Account Banayein",
+    "username": "Username",
+    "password": "Password",
+    "required": "Username aur password dono zaruri hain"
+  },
+  "planner": {
+    "where_to": "Agla trip kahan ka hai?",
+    "generate": "Plan Banayein ✨",
+    "placeholder": "Jaise ki, mujhe 3 din ke liye Goa jana hai..."
+  }
+}
