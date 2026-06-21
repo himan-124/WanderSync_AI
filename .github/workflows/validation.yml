@@ -1,0 +1,59 @@
+name: Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest httpx fastapi sqlalchemy sqlmodel pydantic-settings aiosqlite tenacity jwt bcrypt
+          
+      - name: Lint with Ruff
+        run: ruff check backend
+        
+      - name: Format check with Ruff
+        run: ruff format --check backend
+        
+      - name: Run Tests
+        run: pytest tests
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: TRIP/frontend/package-lock.json
+          
+      - name: Install dependencies
+        run: |
+          cd TRIP/frontend
+          npm install
+          
+      - name: Lint
+        run: |
+          cd TRIP/frontend
+          npm run lint
+          
+      - name: Build
+        run: |
+          cd TRIP/frontend
+          npm run build
